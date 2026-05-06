@@ -1,0 +1,144 @@
+/* eslint-disable @next/next/no-img-element */
+import AnimatedCube from "@/components/animated-cube";
+import SiteFooter from "@/components/site-footer";
+import SiteHeader from "@/components/site-header";
+import WhatsAppFab from "@/components/whatsapp-fab";
+
+const templateCards = [
+  {
+    title: "The Executive Peak",
+    tag: "Corporate Classic",
+    image:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuD8bAXDlfUESKrNBCi6UlTvAQtc2mtSKzcg4_x3fP0Ueb_FQVWy3-8tKqBl4Hz8vSUaB61sl5okulIYEYCWjQzkTjyf6TJ2Mk3mH6sOMpkkHoKDqLL4X-bf5W_g_7-d18MzFmIGBwPym77Ov6PVAgmg7V48Y1UQnENw3zfl_aERpB6-hOCRadBDQnmqqUPm7JIlrPL8Ly8OIoOto_ECgpkR2zi1QXdEZTH2z5rQPtHNl2FyI4o7NR_CDHR0PsDxCcqY-A_aTd3mgh8",
+  },
+  {
+    title: "The Modernist",
+    tag: "Tech & SaaS",
+    image:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuBOkP955SxsBSar-RasGl3qRpxB2oV6UUI8KYMKkdO1D0EGMp1tkdoupPXQenpBRMkri0RGvOxs8Vcrek-zqPRRUlzdvr_DFsAdpHciD_ZM6eMEva2FVgYZO4gPpwWHWQZaUrqEyI0FdLwny1LAoKb6EOCpNa9hSWzL01XviBLmPb85n3Y9jQiHZSa9cxLI-oLHP5mJEFEU0mkC18K-47AbauG4YOqB_JxWns4NwUXhd3uwqpCjP_PYfbUACJ_5hBDO0f4itq7CLrk",
+  },
+  {
+    title: "Creative Bloom",
+    tag: "Design & Arts",
+    image:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuCUPOQwgTTiRxrH9Y1p8FJldFZrvkEYU-NO_OwKgtwgTCTdu0wl9ZHdNp0w0H7croMgSzrt8QM3uhi1zVoAv_lv_M3JVHddveHkJoVw5E6-37UANitL6crHibUhA21ZOIhIyJ41_CBXueWN4KqQ6tysdrKF1lyZl75nOYmN-C1q_NIxvALCPpeB4mE3bRdiS1GEkqYVU0BoZi1gAbpHJBReN-M6JfXK9jb57K--7dIkHkOb5Dbj9QGER6CtvcHcr2q9cgH0DO-KH_Y",
+  },
+  {
+    title: "The Scholar",
+    tag: "Academic & Research",
+    image:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuBCdUnGKqAbDeXxZEuK8Bm3gqIxKjj-H54-GtZU70FpCvTSELu9zM8Rj9vlqnDD1J2zEUzDSGSsHk9WkuCwu8kzDmLe4QZctWzGH5sNzl6LELva7cj8t1ch93DJQdCQrj1NeKDbGFPxClmauf65A-su47-yr_ySJ5GZ7uY5sZVNZeTPLVHPprcqPr4WgBYvtpLTS9oI4h1Y_tkmR5LpCOB0UJvAp4UHHCrjTz9vHaPSWiijd54eCcLPNZlbcRhVUetGPNsXYwKznW8",
+  },
+];
+
+export default function Home() {
+  return (
+    <div className="min-h-screen bg-[#f8f9ff] text-[#0b1c30]">
+      <SiteHeader activePage="home" />
+
+      <main>
+        <section className="overflow-hidden bg-white pb-20 pt-16 lg:pb-28 lg:pt-20">
+          <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-14 px-6 lg:grid-cols-2 lg:px-10">
+            <div>
+              <div className="inline-flex rounded-full bg-emerald-100 px-3 py-1 text-xs font-bold uppercase tracking-wider text-emerald-700">
+                Executive-Grade Resume Builder
+              </div>
+              <h1 className="mt-5 text-4xl font-bold leading-tight text-[#0b1c30] md:text-6xl">
+                Elevate Your Career with{" "}
+                <span className="text-emerald-700">Executive Authority</span>.
+              </h1>
+              <p className="mt-4 max-w-xl text-lg text-slate-600">
+                Transform your professional story into a high-impact document designed for recruiters and ATS systems.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-4">
+                <button className="rounded-lg bg-emerald-700 px-8 py-4 font-semibold text-white transition hover:bg-emerald-600">
+                  Build My Resume
+                </button>
+                <button className="rounded-lg border border-emerald-700 px-8 py-4 font-semibold text-emerald-700 transition hover:bg-emerald-50">
+                  View Examples
+                </button>
+              </div>
+            </div>
+            <div className="relative flex min-h-[360px] items-center justify-center">
+              <div className="absolute inset-6 rounded-full bg-emerald-200/40 blur-3xl" />
+              <div className="relative w-full max-w-md rounded-3xl border border-emerald-100 bg-white/80 p-8 shadow-[0_30px_80px_-20px_rgba(0,109,54,0.25)]">
+                <AnimatedCube />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-[#eff4ff] py-20">
+          <div className="mx-auto w-full max-w-7xl px-6 lg:px-10">
+            <div className="mx-auto mb-14 max-w-3xl text-center">
+              <h2 className="text-3xl font-semibold md:text-4xl">Why People Choose Us</h2>
+              <p className="mt-3 text-slate-600">
+                We combine industrial expertise with premium design to give you an edge.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+              {[
+                ["Precision Layouts", "Engineered spacing and hierarchy that recruiters can scan quickly."],
+                ["AI Context Engine", "Smart suggestions for strong bullets and role-specific keywords."],
+                ["Executive Privacy", "Your data is protected with strong security and private handling."],
+              ].map(([title, text]) => (
+                <div key={title} className="rounded-xl border border-slate-100 bg-white p-8">
+                  <h3 className="text-2xl font-semibold">{title}</h3>
+                  <p className="mt-3 text-sm text-slate-600">{text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-white py-20">
+          <div className="mx-auto w-full max-w-7xl px-6 lg:px-10">
+            <div className="mb-12 flex items-end justify-between gap-6">
+              <div>
+                <h2 className="text-3xl font-semibold md:text-4xl">Professional Templates</h2>
+                <p className="mt-2 text-slate-600">Pick a design that matches your professional persona.</p>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-6 lg:grid-cols-4">
+              {templateCards.map((card) => (
+                <div key={card.title} className="group cursor-pointer">
+                  <div className="mb-4 aspect-[3/4] overflow-hidden rounded-xl border border-slate-200 bg-slate-50">
+                    <img
+                      src={card.image}
+                      alt={card.title}
+                      className="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+                    />
+                  </div>
+                  <h4 className="font-bold">{card.title}</h4>
+                  <p className="text-xs uppercase tracking-widest text-slate-500">{card.tag}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-emerald-900 py-20 text-white">
+          <div className="mx-auto w-full max-w-7xl px-6 lg:px-10">
+            <div className="text-center">
+              <h2 className="text-3xl font-semibold md:text-4xl">Our Seamless Process</h2>
+              <p className="mt-3 text-emerald-100/70">From blank page to professional resume in 15 minutes.</p>
+            </div>
+            <div className="mt-14 grid grid-cols-1 gap-10 md:grid-cols-4">
+              {["Pick a Template", "Import Data", "Optimize Content", "Deploy Resume"].map((step, index) => (
+                <div key={step} className="text-center">
+                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full border border-white/20 bg-white/10 text-xl font-bold">
+                    {String(index + 1).padStart(2, "0")}
+                  </div>
+                  <h4 className="mt-5 text-lg font-bold">{step}</h4>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <SiteFooter />
+      <WhatsAppFab />
+    </div>
+  );
+}
