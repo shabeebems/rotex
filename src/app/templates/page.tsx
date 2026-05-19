@@ -11,27 +11,27 @@ type TemplateCard = {
 const templateCards: TemplateCard[] = [
   {
     title: "The CEO Signature",
-    image: "/templates/Template%201.jpg",
+    image: "/templates/RRM001.jpg",
   },
   {
     title: "Director Tier",
-    image: "/templates/Template%202.jpg",
+    image: "/templates/RRM002.jpg",
   },
   {
     title: "The Studio Bold",
-    image: "/templates/Template%203.jpg",
+    image: "/templates/RRM003.jpg",
   },
   {
     title: "Impact Portfolio",
-    image: "/templates/Template%204.jpg",
+    image: "/templates/RRM004.jpg",
   },
   {
     title: "Standard Corporate",
-    image: "/templates/Template%205.jpg",
+    image: "/templates/RRM005.jpg",
   },
   {
     title: "The Recruiter's Choice",
-    image: "/templates/Template%206.jpg",
+    image: "/templates/RRM006.jpg",
   },
 ];
 
@@ -41,7 +41,7 @@ function TemplateGrid({ cards }: { cards: TemplateCard[] }) {
       {cards.map((card) => (
         <div
           key={card.title}
-          className="rounded-lg bg-white p-2 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.04),0_2px_4px_-1px_rgba(0,0,0,0.02)] transition hover:-translate-y-1 hover:shadow-[0_20px_25px_-5px_rgba(0,0,0,0.05),0_10px_10px_-5px_rgba(0,0,0,0.02)]"
+          className="rounded-lg bg-white p-2 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.04),0_2px_4px_-1px_rgba(0,0,0,0.02)]"
         >
           <div className="relative aspect-[1/1.414] overflow-hidden rounded-xl border border-white/80 bg-gradient-to-br from-[#eff4ff] via-[#f6f8ff] to-[#e8f0ff] p-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.9)]">
             <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(11,28,48,0.05)_1px,transparent_1px)] bg-[length:100%_12px]" />
@@ -51,7 +51,7 @@ function TemplateGrid({ cards }: { cards: TemplateCard[] }) {
               <img
                 src={card.image}
                 alt={card.title}
-                className="h-full w-full object-contain transition duration-500 hover:scale-[1.03]"
+                className="h-full w-full object-contain"
               />
             </div>
           </div>
@@ -88,47 +88,9 @@ export default function TemplatesPage() {
           </p>
         </header>
 
-        <section className="mb-20 rounded-3xl border border-white/70 bg-white/55 p-6 shadow-[0_18px_60px_-40px_rgba(11,28,48,0.35)] backdrop-blur-sm md:p-8">
-          <div className="mb-12 flex flex-wrap gap-3">
-            {["All Templates", "Executive", "Creative", "Simple", "Professional", "Modern"].map(
-              (label, index) => (
-                <button
-                  key={label}
-                  type="button"
-                  className={
-                    index === 0
-                      ? "rounded-full bg-emerald-700 px-6 py-3 font-semibold text-white shadow-sm"
-                      : "rounded-full border border-[#bdcabc] bg-white px-6 py-3 font-semibold text-[#3e4a3f] transition hover:border-emerald-700"
-                  }
-                >
-                  {label}
-                </button>
-              )
-            )}
-          </div>
-
+        <section className="rounded-3xl border border-white/70 bg-white/55 p-6 shadow-[0_18px_60px_-40px_rgba(11,28,48,0.35)] backdrop-blur-sm md:p-8">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
             <TemplateGrid cards={templateCards} />
-          </div>
-        </section>
-
-        <section className="mb-20 flex flex-col items-start gap-8 rounded-xl border border-emerald-200 bg-emerald-100/30 p-8 md:flex-row md:items-center md:p-10">
-          <div className="flex-1">
-            <h2 className="mb-3 text-3xl font-semibold text-emerald-700">Not sure which one to pick?</h2>
-            <p className="text-lg text-[#3e4a3f]">
-              Our AI engine can recommend the best template based on your industry and years of experience.
-            </p>
-          </div>
-          <div className="flex flex-wrap gap-4">
-            <button type="button" className="rounded-lg bg-emerald-700 px-8 py-4 font-semibold text-white">
-              Get Recommendation
-            </button>
-            <button
-              type="button"
-              className="rounded-lg border border-emerald-700 bg-white px-8 py-4 font-semibold text-emerald-700"
-            >
-              Browse Industry Specific
-            </button>
           </div>
         </section>
       </main>

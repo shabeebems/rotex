@@ -3,6 +3,7 @@ import AnimatedCube from "@/components/animated-cube";
 import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
 import WhatsAppFab from "@/components/whatsapp-fab";
+import Link from "next/link";
 
 const templateCards = [
   {
@@ -51,12 +52,18 @@ export default function Home() {
                 Transform your professional story into a high-impact document designed for recruiters and ATS systems.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
-                <button className="rounded-lg bg-emerald-700 px-8 py-4 font-semibold text-white transition hover:bg-emerald-600">
-                  Build My Resume
-                </button>
-                <button className="rounded-lg border border-emerald-700 px-8 py-4 font-semibold text-emerald-700 transition hover:bg-emerald-50">
-                  View Examples
-                </button>
+                <Link
+                  href="/templates"
+                  className="rounded-lg bg-emerald-700 px-8 py-4 font-semibold text-white transition hover:bg-emerald-600"
+                >
+                  View Templates
+                </Link>
+                <Link
+                  href="/templates"
+                  className="rounded-lg border border-emerald-700 px-8 py-4 font-semibold text-emerald-700 transition hover:bg-emerald-50"
+                >
+                  Browse All Templates →
+                </Link>
               </div>
             </div>
             <div className="relative flex min-h-[360px] items-center justify-center">
@@ -93,11 +100,17 @@ export default function Home() {
 
         <section className="bg-white py-20">
           <div className="mx-auto w-full max-w-7xl px-6 lg:px-10">
-            <div className="mb-12 flex items-end justify-between gap-6">
+            <div className="mb-12 flex flex-wrap items-end justify-between gap-6">
               <div>
                 <h2 className="text-3xl font-semibold md:text-4xl">Professional Templates</h2>
                 <p className="mt-2 text-slate-600">Pick a design that matches your professional persona.</p>
               </div>
+              <Link
+                href="/templates"
+                className="rounded-lg border border-emerald-700 px-5 py-2.5 font-semibold text-emerald-700 transition hover:bg-emerald-50"
+              >
+                View All Templates →
+              </Link>
             </div>
             <div className="grid grid-cols-2 gap-6 lg:grid-cols-4">
               {templateCards.map((card) => (
@@ -114,24 +127,60 @@ export default function Home() {
                 </div>
               ))}
             </div>
+            <div className="mt-12 text-center">
+              <Link
+                href="/templates"
+                className="inline-block rounded-lg bg-emerald-700 px-8 py-3 font-semibold text-white transition hover:bg-emerald-600"
+              >
+                Explore All Templates
+              </Link>
+            </div>
           </div>
         </section>
 
         <section className="bg-emerald-900 py-20 text-white">
           <div className="mx-auto w-full max-w-7xl px-6 lg:px-10">
             <div className="text-center">
-              <h2 className="text-3xl font-semibold md:text-4xl">Our Seamless Process</h2>
-              <p className="mt-3 text-emerald-100/70">From blank page to professional resume in 15 minutes.</p>
+              <h2 className="text-3xl font-semibold md:text-4xl">How It Works</h2>
+              <p className="mt-3 text-emerald-100/70">Simple process to get your professional resume</p>
             </div>
             <div className="mt-14 grid grid-cols-1 gap-10 md:grid-cols-4">
-              {["Pick a Template", "Import Data", "Optimize Content", "Deploy Resume"].map((step, index) => (
-                <div key={step} className="text-center">
+              {[
+                {
+                  step: "01",
+                  title: "Select a Template",
+                  description: "Browse through our professional templates and choose the one that best fits your style"
+                },
+                {
+                  step: "02",
+                  title: "Share Your Details",
+                  description: "Share your current resume or provide your work details via WhatsApp at +91 9074531637."
+                },
+                {
+                  step: "03",
+                  title: "ATS Optimization",
+                  description: "We analyze your target job and add relevant keywords to make your resume ATS-friendly"
+                },
+                {
+                  step: "04",
+                  title: "Receive Your Resume",
+                  description: "Get your professionally crafted resume in both Word and PDF formats within 24 hours"
+                }
+              ].map((item) => (
+                <div key={item.step} className="text-center">
                   <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full border border-white/20 bg-white/10 text-xl font-bold">
-                    {String(index + 1).padStart(2, "0")}
+                    {item.step}
                   </div>
-                  <h4 className="mt-5 text-lg font-bold">{step}</h4>
+                  <h4 className="mt-5 text-lg font-bold">{item.title}</h4>
+                  <p className="mt-2 text-sm text-emerald-100/70">{item.description}</p>
                 </div>
               ))}
+            </div>
+            
+            <div className="mt-12 flex flex-col items-center justify-center gap-6">
+              <div className="inline-block rounded-lg bg-emerald-700 px-6 py-3 text-sm font-semibold">
+                ⚡ Receive your resume within 24 hours
+              </div>
             </div>
           </div>
         </section>
