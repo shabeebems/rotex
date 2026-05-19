@@ -8,27 +8,23 @@ import Link from "next/link";
 const templateCards = [
   {
     title: "The Executive Peak",
-    tag: "Corporate Classic",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuD8bAXDlfUESKrNBCi6UlTvAQtc2mtSKzcg4_x3fP0Ueb_FQVWy3-8tKqBl4Hz8vSUaB61sl5okulIYEYCWjQzkTjyf6TJ2Mk3mH6sOMpkkHoKDqLL4X-bf5W_g_7-d18MzFmIGBwPym77Ov6PVAgmg7V48Y1UQnENw3zfl_aERpB6-hOCRadBDQnmqqUPm7JIlrPL8Ly8OIoOto_ECgpkR2zi1QXdEZTH2z5rQPtHNl2FyI4o7NR_CDHR0PsDxCcqY-A_aTd3mgh8",
+    tag: "RRM001",
+    image: "/templates/RRM001.jpg",
   },
   {
     title: "The Modernist",
-    tag: "Tech & SaaS",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuBOkP955SxsBSar-RasGl3qRpxB2oV6UUI8KYMKkdO1D0EGMp1tkdoupPXQenpBRMkri0RGvOxs8Vcrek-zqPRRUlzdvr_DFsAdpHciD_ZM6eMEva2FVgYZO4gPpwWHWQZaUrqEyI0FdLwny1LAoKb6EOCpNa9hSWzL01XviBLmPb85n3Y9jQiHZSa9cxLI-oLHP5mJEFEU0mkC18K-47AbauG4YOqB_JxWns4NwUXhd3uwqpCjP_PYfbUACJ_5hBDO0f4itq7CLrk",
+    tag: "RRM002",
+    image: "/templates/RRM002.jpg",
   },
   {
     title: "Creative Bloom",
-    tag: "Design & Arts",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuCUPOQwgTTiRxrH9Y1p8FJldFZrvkEYU-NO_OwKgtwgTCTdu0wl9ZHdNp0w0H7croMgSzrt8QM3uhi1zVoAv_lv_M3JVHddveHkJoVw5E6-37UANitL6crHibUhA21ZOIhIyJ41_CBXueWN4KqQ6tysdrKF1lyZl75nOYmN-C1q_NIxvALCPpeB4mE3bRdiS1GEkqYVU0BoZi1gAbpHJBReN-M6JfXK9jb57K--7dIkHkOb5Dbj9QGER6CtvcHcr2q9cgH0DO-KH_Y",
+    tag: "RRM005",
+    image: "/templates/RRM005.jpg",
   },
   {
     title: "The Scholar",
-    tag: "Academic & Research",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuBCdUnGKqAbDeXxZEuK8Bm3gqIxKjj-H54-GtZU70FpCvTSELu9zM8Rj9vlqnDD1J2zEUzDSGSsHk9WkuCwu8kzDmLe4QZctWzGH5sNzl6LELva7cj8t1ch93DJQdCQrj1NeKDbGFPxClmauf65A-su47-yr_ySJ5GZ7uY5sZVNZeTPLVHPprcqPr4WgBYvtpLTS9oI4h1Y_tkmR5LpCOB0UJvAp4UHHCrjTz9vHaPSWiijd54eCcLPNZlbcRhVUetGPNsXYwKznW8",
+    tag: "RRM006",
+    image: "/templates/RRM006.jpg",
   },
 ];
 
@@ -114,12 +110,12 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-2 gap-6 lg:grid-cols-4">
               {templateCards.map((card) => (
-                <div key={card.title} className="group cursor-pointer">
+                <div key={card.title} className="cursor-pointer">
                   <div className="mb-4 aspect-[3/4] overflow-hidden rounded-xl border border-slate-200 bg-slate-50">
                     <img
                       src={card.image}
                       alt={card.title}
-                      className="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+                      className="h-full w-full object-cover"
                     />
                   </div>
                   <h4 className="font-bold">{card.title}</h4>

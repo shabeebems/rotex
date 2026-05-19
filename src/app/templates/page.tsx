@@ -1,4 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
+"use client";
+
 import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
 import WhatsAppFab from "@/components/whatsapp-fab";
@@ -10,30 +12,36 @@ type TemplateCard = {
 
 const templateCards: TemplateCard[] = [
   {
-    title: "The CEO Signature",
+    title: "RRM001",
     image: "/templates/RRM001.jpg",
   },
   {
-    title: "Director Tier",
+    title: "RRM002",
     image: "/templates/RRM002.jpg",
   },
   {
-    title: "The Studio Bold",
+    title: "RRM003",
     image: "/templates/RRM003.jpg",
   },
   {
-    title: "Impact Portfolio",
+    title: "RRM004",
     image: "/templates/RRM004.jpg",
   },
   {
-    title: "Standard Corporate",
+    title: "RRM005",
     image: "/templates/RRM005.jpg",
   },
   {
-    title: "The Recruiter's Choice",
+    title: "RRM006",
     image: "/templates/RRM006.jpg",
   },
 ];
+
+function handleUseTemplate(templateTitle: string) {
+  const message = `Hello! I would like to proceed with creating my professional resume using template *${templateTitle}*. Kindly assist me with the next steps. Thank you!`;
+  const encodedMessage = encodeURIComponent(message);
+  window.open(`https://wa.me/919074531637?text=${encodedMessage}`, "_blank");
+}
 
 function TemplateGrid({ cards }: { cards: TemplateCard[] }) {
   return (
@@ -57,7 +65,11 @@ function TemplateGrid({ cards }: { cards: TemplateCard[] }) {
           </div>
           <div className="mt-3 flex items-center justify-between px-2 pb-1">
             <span className="text-base font-semibold">{card.title}</span>
-            <button type="button" className="text-sm font-semibold text-emerald-700 hover:underline">
+            <button
+              type="button"
+              onClick={() => handleUseTemplate(card.title)}
+              className="text-sm font-semibold text-emerald-700 hover:underline"
+            >
               Use This
             </button>
           </div>

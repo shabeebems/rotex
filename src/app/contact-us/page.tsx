@@ -73,11 +73,6 @@ export default function ContactUsPage() {
                 linkText="+91 90745 31637"
                 href="tel:+919074531637"
               />
-              <ContactInfoCard
-                icon="📍"
-                title="Headquarters"
-                description="1200 Executive Plaza, Suite 400 Financial District, NY 10004"
-              />
             </div>
 
             <div className="rounded-xl border border-[#bdcabc] bg-white p-6 shadow-[0_4px_20px_-2px_rgba(0,109,54,0.08)] md:p-10 lg:col-span-7">
@@ -144,23 +139,6 @@ export default function ContactUsPage() {
                   Send Message <span aria-hidden="true">➤</span>
                 </button>
               </form>
-            </div>
-          </div>
-        </section>
-
-        <section className="mx-auto mb-20 w-full max-w-7xl px-6 lg:px-10">
-          <div className="relative h-[400px] overflow-hidden rounded-2xl border border-[#bdcabc]">
-            <img
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCO_9crQnpC03lqQWHWgbEubSX7laa2Z7hnEFyMnUqCs9Lm1bP_58lQ_e3EA05DIaRht9h9Hm8QigacC7QK1ddxKD3Iqwf5r9fnoah5f4A-NZZWy-v9rhjLO771-hk7JKx7EQwOAD9hnM4bNYquxCbrFhM6kr4Jxbf9XgKTtfkCfgCcdKochSNKDGphRxl9hEdLDo6DDHqralPncWEH1eocRKZONBGON8kzb71n3ncLZ-wu9x87Hzk9BSiUSNDfINyXxKIRUSl7f38"
-              alt="Map preview of office location"
-              className="h-full w-full object-cover grayscale contrast-125 opacity-50"
-            />
-            <div className="pointer-events-none absolute inset-0 bg-emerald-700/10" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="flex items-center gap-3 rounded-full border border-emerald-700 bg-white px-6 py-4 shadow-[0_4px_20px_-2px_rgba(0,109,54,0.08)]">
-                <span className="text-emerald-700">📍</span>
-                <span className="font-semibold text-[#0b1c30]">Visit our Executive Suite</span>
-              </div>
             </div>
           </div>
         </section>
