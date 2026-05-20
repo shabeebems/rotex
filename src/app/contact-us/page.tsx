@@ -75,70 +75,86 @@ export default function ContactUsPage() {
               />
             </div>
 
-            <div className="rounded-xl border border-[#bdcabc] bg-white p-6 shadow-[0_4px_20px_-2px_rgba(0,109,54,0.08)] md:p-10 lg:col-span-7">
-              <div className="mb-10">
-                <h2 className="mb-1 text-3xl font-semibold">Send us a Message</h2>
-                <p className="text-[#565e74]">
-                  Our career consultants will review your request and get back to you shortly.
-                </p>
-              </div>
+            {/* WhatsApp CTA + FAQ panel */}
+            <div className="flex flex-col gap-6 lg:col-span-7">
 
-              <form className="space-y-6">
-                <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-                  <label className="space-y-2">
-                    <span className="block text-xs font-bold uppercase tracking-[0.08em] text-[#565e74]">
-                      Full Name
-                    </span>
-                    <input
-                      type="text"
-                      placeholder="John Doe"
-                      className="w-full rounded-lg border border-[#bdcabc] bg-white px-4 py-3 outline-none transition focus:border-emerald-700 focus:ring-1 focus:ring-emerald-700"
-                    />
-                  </label>
+              {/* WhatsApp CTA card */}
+              <a
+                href="https://wa.me/919074531637"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative overflow-hidden rounded-xl bg-[#25D366] p-8 shadow-[0_8px_32px_-4px_rgba(37,211,102,0.35)] transition hover:shadow-[0_12px_40px_-4px_rgba(37,211,102,0.5)] md:p-10"
+              >
+                {/* decorative circles */}
+                <span className="absolute -right-10 -top-10 h-48 w-48 rounded-full bg-white/10 transition-transform duration-500 group-hover:scale-125" />
+                <span className="absolute -bottom-8 -left-8 h-36 w-36 rounded-full bg-white/10 transition-transform duration-500 group-hover:scale-125" />
 
-                  <label className="space-y-2">
-                    <span className="block text-xs font-bold uppercase tracking-[0.08em] text-[#565e74]">
-                      Email Address
-                    </span>
-                    <input
-                      type="email"
-                      placeholder="john@example.com"
-                      className="w-full rounded-lg border border-[#bdcabc] bg-white px-4 py-3 outline-none transition focus:border-emerald-700 focus:ring-1 focus:ring-emerald-700"
-                    />
-                  </label>
+                <div className="relative flex items-center gap-5">
+                  <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-white/20 text-4xl shadow-inner">
+                    💬
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold uppercase tracking-widest text-white/80">Fastest way to reach us</p>
+                    <h2 className="mt-1 text-2xl font-bold text-white md:text-3xl">Chat on WhatsApp</h2>
+                    <p className="mt-1 text-white/90">Tap to open a conversation — we typically reply in minutes.</p>
+                  </div>
                 </div>
 
-                <label className="space-y-2">
-                  <span className="block text-xs font-bold uppercase tracking-[0.08em] text-[#565e74]">
-                    Subject
+                <div className="relative mt-8 flex items-center gap-3">
+                  <span className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-bold text-[#075e54] shadow transition group-hover:scale-105">
+                    <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                    </svg>
+                    Start a Chat
                   </span>
-                  <select className="w-full rounded-lg border border-[#bdcabc] bg-white px-4 py-3 outline-none transition focus:border-emerald-700 focus:ring-1 focus:ring-emerald-700">
-                    <option>Technical Support</option>
-                    <option>Resume Writing Services</option>
-                    <option>Enterprise Solutions</option>
-                    <option>Billing Inquiry</option>
-                    <option>Other</option>
-                  </select>
-                </label>
+                  <span className="text-white/70 text-sm">+91 90745 31637</span>
+                </div>
+              </a>
 
-                <label className="space-y-2">
-                  <span className="block text-xs font-bold uppercase tracking-[0.08em] text-[#565e74]">
-                    Your Message
-                  </span>
-                  <textarea
-                    rows={6}
-                    placeholder="How can we help you achieve your career goals?"
-                    className="w-full resize-none rounded-lg border border-[#bdcabc] bg-white px-4 py-3 outline-none transition focus:border-emerald-700 focus:ring-1 focus:ring-emerald-700"
-                  />
-                </label>
+              {/* FAQ accordion */}
+              <div className="rounded-xl border border-[#bdcabc] bg-white p-6 shadow-[0_4px_20px_-2px_rgba(0,109,54,0.08)] md:p-8">
+                <h2 className="mb-6 text-2xl font-semibold text-[#0b1c30]">Frequently Asked Questions</h2>
 
-                <button
-                  type="submit"
-                  className="flex w-full items-center justify-center gap-2 rounded-lg bg-emerald-700 px-10 py-4 font-semibold text-white shadow-sm transition hover:opacity-90 md:w-auto"
-                >
-                  Send Message <span aria-hidden="true">➤</span>
-                </button>
-              </form>
+                <details className="group border-b border-[#e8edf0] py-4 open:pb-5">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-[#0b1c30] group-open:text-emerald-700">
+                    How quickly will I receive my resume?
+                    <span className="text-xl transition-transform duration-300 group-open:rotate-45">＋</span>
+                  </summary>
+                  <p className="mt-3 text-[#565e74] leading-relaxed">
+                    Standard delivery is within <strong>24 hours</strong> of order confirmation. Express delivery (same-day) is available for an additional fee — just mention it when you chat with us on WhatsApp.
+                  </p>
+                </details>
+
+                <details className="group border-b border-[#e8edf0] py-4 open:pb-5">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-[#0b1c30] group-open:text-emerald-700">
+                    Can I request unlimited revisions?
+                    <span className="text-xl transition-transform duration-300 group-open:rotate-45">＋</span>
+                  </summary>
+                  <p className="mt-3 text-[#565e74] leading-relaxed">
+                    Yes! We offer <strong>free revisions</strong> until you are 100% satisfied with your resume. Simply reach out via WhatsApp with your feedback and we&apos;ll get it updated right away.
+                  </p>
+                </details>
+
+                <details className="group border-b border-[#e8edf0] py-4 open:pb-5">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-[#0b1c30] group-open:text-emerald-700">
+                    What formats will I receive my resume in?
+                    <span className="text-xl transition-transform duration-300 group-open:rotate-45">＋</span>
+                  </summary>
+                  <p className="mt-3 text-[#565e74] leading-relaxed">
+                    Your final resume is delivered as a <strong>PDF</strong> (print-ready) and a <strong>Word (.docx)</strong> file so you can make minor edits yourself whenever needed.
+                  </p>
+                </details>
+
+                <details className="group py-4 open:pb-5">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-[#0b1c30] group-open:text-emerald-700">
+                    How do I get started?
+                    <span className="text-xl transition-transform duration-300 group-open:rotate-45">＋</span>
+                  </summary>
+                  <p className="mt-3 text-[#565e74] leading-relaxed">
+                    Browse our <a href="/templates" className="font-semibold text-emerald-700 hover:underline">resume templates</a>, pick the one that suits your style, then tap <strong>&quot;Use This&quot;</strong> — it&apos;ll open a WhatsApp chat with us pre-filled with your selection so we can get started immediately.
+                  </p>
+                </details>
+              </div>
             </div>
           </div>
         </section>
