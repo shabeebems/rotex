@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import { PageBackdropOrbs } from "@/components/page-backdrop";
 import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
 import WhatsAppFab from "@/components/whatsapp-fab";
@@ -17,14 +18,14 @@ function ContactInfoCard({
   href?: string;
 }) {
   return (
-    <div className="rounded-xl border border-[#bdcabc] bg-white p-8 shadow-[0_4px_20px_-2px_rgba(0,109,54,0.08)] transition hover:border-emerald-700">
-      <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-emerald-100/50 text-xl text-emerald-700">
+    <div className="luxury-card rounded-xl p-8 transition hover:border-forest-600">
+      <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-sage-100 text-xl text-forest-700">
         {icon}
       </div>
-      <h3 className="mb-2 text-2xl font-semibold text-[#0b1c30]">{title}</h3>
-      <p className="mb-4 text-[#565e74]">{description}</p>
+      <h3 className="mb-2 text-2xl font-semibold text-forest-900">{title}</h3>
+      <p className="mb-4 text-muted">{description}</p>
       {linkText && href ? (
-        <a href={href} className="font-bold text-emerald-700 hover:underline">
+        <a href={href} className="font-bold text-forest-700 hover:text-gold hover:underline">
           {linkText}
         </a>
       ) : null}
@@ -34,22 +35,23 @@ function ContactInfoCard({
 
 export default function ContactUsPage() {
   return (
-    <div className="min-h-screen bg-[#f8f9ff] text-[#0b1c30]">
+    <div className="luxury-page">
       <SiteHeader activePage="contact-us" />
 
       <main className="min-h-screen">
-        <section className="relative overflow-hidden bg-[#eff4ff] pb-12 pt-20 lg:pb-16">
-          <div className="absolute right-0 top-0 -z-10 h-full w-1/3 opacity-5">
-            <svg className="h-full w-full fill-current text-emerald-700" viewBox="0 0 100 100">
+        <section className="relative overflow-hidden luxury-section-hero pb-12 pt-20 lg:pb-16">
+          <PageBackdropOrbs />
+          <div className="absolute right-0 top-0 -z-10 h-full w-1/3 opacity-[0.07]">
+            <svg className="h-full w-full fill-current text-forest-700" viewBox="0 0 100 100">
               <path d="M0 0 L100 0 L100 100 Z" />
             </svg>
           </div>
-          <div className="mx-auto w-full max-w-7xl px-6 lg:px-10">
+          <div className="relative mx-auto w-full max-w-7xl px-6 lg:px-10">
             <div className="max-w-2xl">
-              <h1 className="mb-3 text-4xl font-bold leading-tight md:text-6xl">
+              <h1 className="mb-3 text-4xl font-bold leading-tight text-forest-900 md:text-6xl">
                 Get in touch with our Executive Support Team
               </h1>
-              <p className="text-lg text-[#565e74]">
+              <p className="text-lg text-muted">
                 Whether you need technical assistance or career guidance, our specialists are ready to help you elevate your professional presence.
               </p>
             </div>
@@ -75,17 +77,13 @@ export default function ContactUsPage() {
               />
             </div>
 
-            {/* WhatsApp CTA + FAQ panel */}
             <div className="flex flex-col gap-6 lg:col-span-7">
-
-              {/* WhatsApp CTA card */}
               <a
                 href="https://wa.me/919074531637"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative overflow-hidden rounded-xl bg-[#25D366] p-8 shadow-[0_8px_32px_-4px_rgba(37,211,102,0.35)] transition hover:shadow-[0_12px_40px_-4px_rgba(37,211,102,0.5)] md:p-10"
               >
-                {/* decorative circles */}
                 <span className="absolute -right-10 -top-10 h-48 w-48 rounded-full bg-white/10 transition-transform duration-500 group-hover:scale-125" />
                 <span className="absolute -bottom-8 -left-8 h-36 w-36 rounded-full bg-white/10 transition-transform duration-500 group-hover:scale-125" />
 
@@ -107,51 +105,50 @@ export default function ContactUsPage() {
                     </svg>
                     Start a Chat
                   </span>
-                  <span className="text-white/70 text-sm">+91 90745 31637</span>
+                  <span className="text-sm text-white/70">+91 90745 31637</span>
                 </div>
               </a>
 
-              {/* FAQ accordion */}
-              <div className="rounded-xl border border-[#bdcabc] bg-white p-6 shadow-[0_4px_20px_-2px_rgba(0,109,54,0.08)] md:p-8">
-                <h2 className="mb-6 text-2xl font-semibold text-[#0b1c30]">Frequently Asked Questions</h2>
+              <div className="luxury-card rounded-xl p-6 md:p-8">
+                <h2 className="mb-6 text-2xl font-semibold text-forest-900">Frequently Asked Questions</h2>
 
-                <details className="group border-b border-[#e8edf0] py-4 open:pb-5">
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-[#0b1c30] group-open:text-emerald-700">
+                <details className="group border-b border-sage-300/70 py-4 open:pb-5">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-forest-900 group-open:text-forest-700">
                     How quickly will I receive my resume?
                     <span className="text-xl transition-transform duration-300 group-open:rotate-45">＋</span>
                   </summary>
-                  <p className="mt-3 text-[#565e74] leading-relaxed">
+                  <p className="mt-3 leading-relaxed text-muted">
                     Standard delivery is within <strong>24 hours</strong> of order confirmation. Express delivery (same-day) is available for an additional fee — just mention it when you chat with us on WhatsApp.
                   </p>
                 </details>
 
-                <details className="group border-b border-[#e8edf0] py-4 open:pb-5">
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-[#0b1c30] group-open:text-emerald-700">
+                <details className="group border-b border-sage-300/70 py-4 open:pb-5">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-forest-900 group-open:text-forest-700">
                     Can I request unlimited revisions?
                     <span className="text-xl transition-transform duration-300 group-open:rotate-45">＋</span>
                   </summary>
-                  <p className="mt-3 text-[#565e74] leading-relaxed">
+                  <p className="mt-3 leading-relaxed text-muted">
                     Yes! We offer <strong>free revisions</strong> until you are 100% satisfied with your resume. Simply reach out via WhatsApp with your feedback and we&apos;ll get it updated right away.
                   </p>
                 </details>
 
-                <details className="group border-b border-[#e8edf0] py-4 open:pb-5">
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-[#0b1c30] group-open:text-emerald-700">
+                <details className="group border-b border-sage-300/70 py-4 open:pb-5">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-forest-900 group-open:text-forest-700">
                     What formats will I receive my resume in?
                     <span className="text-xl transition-transform duration-300 group-open:rotate-45">＋</span>
                   </summary>
-                  <p className="mt-3 text-[#565e74] leading-relaxed">
+                  <p className="mt-3 leading-relaxed text-muted">
                     Your final resume is delivered as a <strong>PDF</strong> (print-ready) and a <strong>Word (.docx)</strong> file so you can make minor edits yourself whenever needed.
                   </p>
                 </details>
 
                 <details className="group py-4 open:pb-5">
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-[#0b1c30] group-open:text-emerald-700">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-forest-900 group-open:text-forest-700">
                     How do I get started?
                     <span className="text-xl transition-transform duration-300 group-open:rotate-45">＋</span>
                   </summary>
-                  <p className="mt-3 text-[#565e74] leading-relaxed">
-                    Browse our <a href="/templates" className="font-semibold text-emerald-700 hover:underline">resume templates</a>, pick the one that suits your style, then tap <strong>&quot;Use This&quot;</strong> — it&apos;ll open a WhatsApp chat with us pre-filled with your selection so we can get started immediately.
+                  <p className="mt-3 leading-relaxed text-muted">
+                    Browse our <a href="/templates" className="font-semibold text-forest-700 hover:text-gold hover:underline">resume templates</a>, pick the one that suits your style, then tap <strong>&quot;Use This&quot;</strong> — it&apos;ll open a WhatsApp chat with us pre-filled with your selection so we can get started immediately.
                   </p>
                 </details>
               </div>

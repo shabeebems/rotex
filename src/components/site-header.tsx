@@ -20,11 +20,10 @@ export default function SiteHeader({ activePage }: SiteHeaderProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white">
+    <header className="sticky top-0 z-50 border-b border-sage-300/60 bg-cream-50/95 backdrop-blur-md">
       <nav className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
-        <div className="text-xl font-black tracking-tight text-emerald-700">Rotex ResumeMaker</div>
-        
-        {/* Desktop Navigation */}
+        <div className="text-xl font-black tracking-tight text-forest-700">Rotex ResumeMaker</div>
+
         <div className="hidden items-center space-x-8 text-sm md:flex">
           {navItems.map((item) => (
             <Link
@@ -32,8 +31,8 @@ export default function SiteHeader({ activePage }: SiteHeaderProps) {
               href={item.href}
               className={
                 activePage === item.key
-                  ? "border-b-2 border-emerald-600 px-1 py-1 font-bold text-emerald-600"
-                  : "text-slate-600 transition hover:text-emerald-600"
+                  ? "border-b-2 border-gold px-1 py-1 font-bold text-forest-700"
+                  : "text-muted transition hover:text-forest-600"
               }
             >
               {item.label}
@@ -41,9 +40,8 @@ export default function SiteHeader({ activePage }: SiteHeaderProps) {
           ))}
         </div>
 
-        {/* Mobile Menu Button */}
         <button
-          className="block rounded-lg p-2 text-slate-600 hover:bg-slate-100 md:hidden"
+          className="block rounded-lg p-2 text-muted hover:bg-sage-100 md:hidden"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -65,9 +63,8 @@ export default function SiteHeader({ activePage }: SiteHeaderProps) {
         </button>
       </nav>
 
-      {/* Mobile Navigation Menu */}
       {isMobileMenuOpen && (
-        <div className="border-t border-slate-200 bg-white md:hidden">
+        <div className="border-t border-sage-300/60 bg-cream-50 md:hidden">
           <div className="flex flex-col space-y-4 px-6 py-4">
             {navItems.map((item) => (
               <Link
@@ -75,8 +72,8 @@ export default function SiteHeader({ activePage }: SiteHeaderProps) {
                 href={item.href}
                 className={
                   activePage === item.key
-                    ? "block border-l-4 border-emerald-600 pl-3 font-bold text-emerald-600"
-                    : "block text-slate-600 transition hover:text-emerald-600"
+                    ? "block border-l-4 border-gold pl-3 font-bold text-forest-700"
+                    : "block text-muted transition hover:text-forest-600"
                 }
                 onClick={() => setIsMobileMenuOpen(false)}
               >
