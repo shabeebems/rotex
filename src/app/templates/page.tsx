@@ -200,8 +200,9 @@ function TemplateGrid({
                 className="h-full w-full object-contain transition group-hover:scale-[1.02]"
               />
             </div>
-            <span className="pointer-events-none absolute bottom-5 left-1/2 -translate-x-1/2 rounded-full bg-forest-900/75 px-3 py-1 text-xs font-medium text-cream-50 opacity-0 transition group-hover:opacity-100">
-              Click to view
+            <span className="pointer-events-none absolute bottom-5 left-1/2 z-10 -translate-x-1/2 rounded-full bg-forest-900/75 px-3 py-1 text-xs font-medium text-cream-50 opacity-100 transition [@media(hover:hover)]:opacity-0 [@media(hover:hover)]:group-hover:opacity-100">
+              <span className="[@media(hover:hover)]:hidden">Tap to view</span>
+              <span className="hidden [@media(hover:hover)]:inline">Click to view</span>
             </span>
           </button>
           <div className="mt-3 flex items-center justify-between px-2 pb-1">
