@@ -4,6 +4,7 @@ import { PageBackdropOrbs } from "@/components/page-backdrop";
 import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
 import WhatsAppFab from "@/components/whatsapp-fab";
+import TemplatePrice from "@/components/template-price";
 import Link from "next/link";
 
 const templateCards = [
@@ -122,6 +123,7 @@ export default function Home() {
                   </div>
                   <h4 className="font-bold text-forest-900">{card.title}</h4>
                   <p className="text-xs uppercase tracking-widest text-muted">{card.tag}</p>
+                  <TemplatePrice className="mt-1.5" size="sm" />
                 </div>
               ))}
             </div>

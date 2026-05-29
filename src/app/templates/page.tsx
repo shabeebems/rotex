@@ -2,6 +2,7 @@
 "use client";
 
 import { PageBackdropOrbs } from "@/components/page-backdrop";
+import TemplatePrice from "@/components/template-price";
 import { useCallback, useEffect, useState } from "react";
 import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
@@ -112,6 +113,7 @@ function TemplatePreviewModal({
             <p className="text-xs text-muted">
               {index + 1} of {cards.length}
             </p>
+            <TemplatePrice className="mt-1" size="sm" />
           </div>
           <button
             type="button"
@@ -205,8 +207,11 @@ function TemplateGrid({
               <span className="hidden [@media(hover:hover)]:inline">Click to view</span>
             </span>
           </button>
-          <div className="mt-3 flex items-center justify-between px-2 pb-1">
-            <span className="text-base font-semibold text-forest-900">{card.title}</span>
+          <div className="mt-3 flex items-start justify-between gap-3 px-2 pb-1">
+            <div>
+              <span className="text-base font-semibold text-forest-900">{card.title}</span>
+              <TemplatePrice className="mt-1" size="sm" />
+            </div>
             <button
               type="button"
               onClick={() => handleUseTemplate(card.title)}
