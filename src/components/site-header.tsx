@@ -1,4 +1,5 @@
 "use client"
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -22,7 +23,20 @@ export default function SiteHeader({ activePage }: SiteHeaderProps) {
   return (
     <header className="sticky top-0 z-50 border-b border-sage-300/60 bg-cream-50/95 backdrop-blur-md">
       <nav className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
-        <div className="text-xl font-black tracking-tight text-forest-700">Rotex ResumeMaker</div>
+        <Link href="/" className="flex items-center gap-2.5 sm:gap-3">
+          <Image
+            src="/logo.png"
+            alt=""
+            width={1323}
+            height={1189}
+            priority
+            unoptimized
+            className="h-10 w-auto sm:h-11"
+          />
+          <span className="text-xl font-black tracking-tight text-forest-700">
+            Rotex ResumeMaker
+          </span>
+        </Link>
 
         <div className="hidden items-center space-x-8 text-sm md:flex">
           {navItems.map((item) => (
