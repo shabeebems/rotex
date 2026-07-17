@@ -1,38 +1,39 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
+import { getResumeTemplateImage } from "@/data/resume-templates";
 import { useAnimationFrame } from "motion/react";
 import { useRef } from "react";
 
 const cubeSides = [
   {
     name: "front",
-    image: "/templates/RRM001.jpg",
+    templateId: "RRM001",
     transform: "[transform:rotateY(0deg)_translateZ(100px)]",
   },
   {
     name: "left",
-    image: "/templates/RRM002.jpg",
+    templateId: "RRM002",
     transform: "[transform:rotateY(-90deg)_translateZ(100px)]",
   },
   {
     name: "right",
-    image: "/templates/RRM003.jpg",
+    templateId: "RRM003",
     transform: "[transform:rotateY(90deg)_translateZ(100px)]",
   },
   {
     name: "top",
-    image: "/templates/RRM004.jpg",
+    templateId: "RRM004",
     transform: "[transform:rotateX(90deg)_translateZ(100px)]",
   },
   {
     name: "bottom",
-    image: "/templates/RRM005.jpg",
+    templateId: "RRM005",
     transform: "[transform:rotateX(-90deg)_translateZ(100px)]",
   },
   {
     name: "back",
-    image: "/templates/RRM006.jpg",
+    templateId: "RRM006",
     transform: "[transform:rotateY(180deg)_translateZ(100px)]",
   },
 ] as const;
@@ -104,7 +105,7 @@ export default function AnimatedCube() {
             className={`absolute inset-0 overflow-hidden bg-white ${side.transform}`}
           >
             <img
-              src={side.image}
+              src={getResumeTemplateImage(side.templateId)}
               alt=""
               className="relative z-0 h-full w-full object-contain object-top"
               draggable={false}

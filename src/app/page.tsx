@@ -5,28 +5,29 @@ import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
 import WhatsAppFab from "@/components/whatsapp-fab";
 import TemplatePrice from "@/components/template-price";
+import { getResumeTemplateImage } from "@/data/resume-templates";
 import Link from "next/link";
 
 const templateCards = [
   {
     title: "The Executive Peak",
     tag: "RRM001",
-    image: "/templates/RRM001.jpg",
+    image: getResumeTemplateImage("RRM001"),
   },
   {
     title: "The Modernist",
     tag: "RRM002",
-    image: "/templates/RRM002.jpg",
+    image: getResumeTemplateImage("RRM002"),
   },
   {
     title: "Creative Bloom",
     tag: "RRM005",
-    image: "/templates/RRM005.jpg",
+    image: getResumeTemplateImage("RRM005"),
   },
   {
     title: "The Scholar",
     tag: "RRM006",
-    image: "/templates/RRM006.jpg",
+    image: getResumeTemplateImage("RRM006"),
   },
 ];
 
